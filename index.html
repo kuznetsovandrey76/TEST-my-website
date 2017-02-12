@@ -83,8 +83,8 @@
 		}
 		.content__button--text {
 			font-size: .8em;
-			position: inherit;
-			bottom: -.8em;
+			position: relative;
+			margin-top: 2.8em;
 			width: 100%;
 		}
 		.experience {
@@ -98,6 +98,7 @@
 		}
 		.additional-menu {
 			display: none;
+			background: gray;
 		}		
 		.attention{
 			color: #F00;
@@ -109,13 +110,16 @@
 			display: none;
 		}
 		.additional-menu--home {
-			background: tomato;
+			background: url("cancel.png") no-repeat;
 			width: 100px;
 			height: 100px;
-			display: absolute;
-			right: 0;
-			border-radius: 100%;
-			/*text-align: right;*/
+			display: block;
+			right: 1em;
+			position: absolute;
+			cursor: pointer;			
+		}
+		.additional-menu__heading {
+			margin: .5em 0;
 		}
 	</style>
 </head>
@@ -126,7 +130,7 @@
 
 		<div class="additional-menu--home" id="experienceHome"></div>
 
-		<h2>Experience</h2>
+		<h2 class="additional-menu__heading">Experience</h2>
 		<ul class="additional-menu__list experience__list">
 			<li><span class="attention">Y</span>andex ??’-??’ / Frontend developer</li>
 			<li>School#3 16’-17’ / PE Teacher <span class="attention">now</span></li>
@@ -135,7 +139,7 @@
 			<li>E-Commerce 14’-15’ / Web Developer</li>
 			<li>FST Russia 13’-14’ / Public Officer</li>
 		</ul>
-		<h2>Education</h2>
+		<h2 class="additional-menu__heading">Education</h2>
 		<ul class="additional-menu__list">
 			<li>Military University of the Ministry of Defense of the Rissian Federation / Moscow</li>
 			<li>Yaroslavl State Pedagogical University named after K.D. Ushinsky / Yaroslavl</li>
@@ -180,7 +184,7 @@
 
 		<div class="additional-menu--home" id="skillsHome"></div>
 
-		<h2>Skills</h2>
+		<h2 class="additional-menu__heading">Skills</h2>
 		<ul class="additional-menu__list">
 			<li>HTML5</li>
 			<li>CSS3</li>
