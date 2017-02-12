@@ -15,6 +15,7 @@
 			display: table;
 			width: 100%;
 			font-family: 'Raleway', sans-serif;
+			background: lightgray;
 		}	
 		.content {
 			width: 80%;
@@ -26,6 +27,7 @@
 			padding: 10px;
 			border-left: 1px solid; 
 			border-right: 1px solid; 
+			background: white;
 		}
 		.content__logo{
 			border-radius: 100%;
@@ -66,56 +68,66 @@
 		}
 
 		.content__button {
-			width: 2em;
-			height: 2em;
+			width: 2.5em;
+			height: 2.5em;
 			background: gray;
 			position: absolute;
 			top: 50vh;
 			cursor: pointer;
-			border-radius: 100%;
+			/*border-radius: 100%;*/
 		}
 
-		.content__button--experience {
+		.experience__button {
 			right: 89%;
+			background: url("left.png") no-repeat;
 		}
 
-		.content__button--skills {
+		.skills__button {
 			left: 89%;
+			background: url("right.png") no-repeat;
+		}
+
+		.content__button--text {
+			font-size: .8em;
+			position: inherit;
+			bottom: -.8em;
+			/*left: 25%;*/
+			/*text-align: center;*/
+			/*background: tomato;*/
+			width: 100%;
+			/*margin: 0 auto;*/
 		}
 
 		.experience {
-			background: lightgray;
+			background: tomato;
 			display: table-cell;
-			width: 10%;
-		}
-
-		.skills {
-			background: lightgray;
-			width: 10%;					
-			display: table-cell;
-		}
-
-		.additional-menu ul {
-			display: none;
 			width: 80%;
-			margin: 0 auto;
-			text-align: center;	
-			height: 100vh;	
-			vertical-align: middle;	
-			padding: 10px;
+			transition: all 3s;
+		}
+		.additional-menu__list {
 			list-style: none;
 		}
+
+		.additional-menu {
+			display: none;
+		}
 		
-		.additional-menu__list--right-now {
+		.red-color{
 			color: #F00;
 		}
-		.experience ul {
-			
+
+		.additional-menu__list--img {
+			width: .8em;
 		}
 
-		.skills ul {
-			
+
+		.hidden {
+			display: none;
 		}
+		.show {
+			display: table-cell;
+		}
+		
 
 
 	</style>
@@ -123,24 +135,30 @@
 <body>
 
 	<!-- experience -->
-	<div class="experience additional-menu">
-		<ul id="experienceList">
-			<li><i class="fa fa-angle-right" aria-hidden="true"></i> <span class="yandex">Y</span>andex ??’-??’ / Frontend developer</li>
-			<li><i class="fa fa-angle-right" aria-hidden="true"></i> School#3 16’-17’ / PE Teacher <span class="additional-menu__list--right-now">now</span></li>
-			<li><i class="fa fa-angle-right" aria-hidden="true"></i> Raiffeisen Bank 16’ / Officer</li>
-			<li><i class="fa fa-angle-right" aria-hidden="true"></i> Sberbank 15’-16’ / Senior Manager</li>
-			<li><i class="fa fa-angle-right" aria-hidden="true"></i> E-Commerce 14’-15’ / Web Developer</li>
-			<li><i class="fa fa-angle-right" aria-hidden="true"></i> FST Russia 13’-14’ / Public Officer</li>
+	<div class="additional-menu" id="experience">
+		<h2>Experience</h2>
+		<ul class="additional-menu__list experience__list">
+			<li><span class="red-color">Y</span>andex ??’-??’ / Frontend developer</li>
+			<li>School#3 16’-17’ / PE Teacher <span class="red-color">now</span></li>
+			<li>Raiffeisen Bank 16’ / Officer</li>
+			<li>Sberbank 15’-16’ / Senior Manager</li>
+			<li>E-Commerce 14’-15’ / Web Developer</li>
+			<li>FST Russia 13’-14’ / Public Officer</li>
 		</ul>
+		<h2>Education</h2>
 		<ul>
-			<li><i class="fa fa-book" aria-hidden="true"></i> Military University of the Ministry of Defense of the Rissian Federation / Moscow</li>
-			<li><i class="fa fa-book" aria-hidden="true"></i> Yaroslavl State Pedagogical University named after K.D. Ushinsky / Yaroslavl</li>
+			<li>Military University of the Ministry of Defense of the Rissian Federation / Moscow</li>
+			<li>Yaroslavl State Pedagogical University named after K.D. Ushinsky / Yaroslavl</li>
 		</ul>
 	</div>
 
 	<!-- content -->
 	<div class="content" id="content">
-		<div class="content__button content__button--experience" id="experienceButton"></div>
+
+			<div class="content__button experience__button" id="experienceButton">
+				<p class="content__button--text">exp.</p>
+			</div>
+
 		<img class="content__logo" src="https://c1.staticflickr.com/1/623/31802464013_f913465244_m.jpg" alt="Andrey Kuznetsov">
 		<div class="content__text">
 			<h1>Andrey Kuznetsov</h1>
@@ -160,39 +178,66 @@
 			<a class="content__connect--phone" href="#">+7 (915) 971 90 05</a>
 			<a class="content__connect--skype" href="skype:live:and.rey.q">skype</a>			
 		</div>
-		<div class="content__button content__button--skills" id="skills"></div>
+
+			<div class="content__button skills__button" id="skillsButton">
+				<p class="content__button--text">skills</p>
+			</div>
+
 	</div>
 
 	<!-- skills -->
-	<div class="skills additional-menu">
-		<ul id="skillsList">
-			<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> HTML5</li>
-			<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> CSS3</li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> JS</li>
-			<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> GIT</li>
-			<li><img src="https://c1.staticflickr.com/1/411/32000688114_6c8927db9a_o.png" alt="slack"> SLACK</li>
-			<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> SUBLIME</li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> SASS</li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> WEBPACK</li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> BOWER</li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> GULP</li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> NODE.JS <span class="additional-menu__list--right-now">now</span></li>
-			<li><i class="fa fa-hand-o-right" aria-hidden="true"></i> MONGODB <span class="additional-menu__list--right-now">now</span></li>
+	<div class="additional-menu" id="skills">
+		<h2>Skills</h2>
+		<ul class="additional-menu__list">
+			<li>HTML5</li>
+			<li>CSS3</li>
+			<li>JS</li>
+			<li>GIT</li>
+			<li><img class="additional-menu__list--img" src="https://c1.staticflickr.com/1/411/32000688114_6c8927db9a_o.png" alt="slack"> SLACK</li>
+			<li>SUBLIME</li>
+			<li>SASS</li>
+			<li>WEBPACK</li>
+			<li>BOWER</li>
+			<li>GULP</li>
+			<li>NODE.JS <span class="red-color">now</span></li>
+			<li>MONGODB <span class="red-color">now</span></li>
 		</ul>
 	</div>
 
 
 	<script>
+		var contentBlock = true,
+			experienceBlock = false,
+			skillsBlock = false;
+
 		experienceButton.addEventListener('click', function() {
 			console.log('experience');
-			experienceList.style.display = 'table-cell';
-			content.style.display = 'none';
-
+			if (contentBlock) { 
+				experience.classList.add('content');
+				experience.classList.remove('additional-menu');
+				contentBlock = false;
+				experienceBlock = true;
+			} else {
+				experience.classList.remove('content');
+				experience.classList.add('additional-menu');
+				contentBlock = true;
+				experienceBlock = false;
+			}
 		});
-		skills.addEventListener('click', function() {
+
+		skillsButton.addEventListener('click', function() {
 			console.log('skills');	
-			skillsList.style.display = 'table-cell';
-			content.style.display = 'none';			
+			if (contentBlock) { 
+				skills.classList.add('content');
+				skills.classList.remove('additional-menu');
+				contentBlock = false;
+				skillsBlock = true;
+			} else {
+				skills.classList.remove('content');
+				skills.classList.add('additional-menu');
+				contentBlock = true;
+				skillsBlock = false;
+			}
 		});
 	</script>
 </body>
