@@ -8,13 +8,9 @@
 	display: none; 
 }  
 .additional-menu--home {
-	background: url("cancel.png") no-repeat;
 	cursor: pointer;
-	display: block;
-	height: 100px;
 	position: absolute;
-	right: 1em;
-	width: 100px; 
+	right: 2em;
 }  
 .additional-menu__heading { 
 	margin: .5em 0; 
@@ -36,7 +32,9 @@
 body {
 	display: table;
 	font-family: 'Raleway', sans-serif;
-	width: 100%; 
+	width: 100%;
+	/* if you like these fonts you can have them without using a link tag as they cover every availble fonts on every OS and they are pretty cool, your website will be faster since your fonts will be already loaded from the local machine */
+	/* font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif; */
 }  
 .content {
 	display: table-cell;
@@ -52,16 +50,13 @@ body {
 	width: 80%; 
 }  
 .content__button {
-	background: gray;
 	cursor: pointer;
 	height: 2.5em;
 	position: absolute;
 	top: 50vh;
-	width: 2.5em; 
 }  
 .content__button--text {
 	font-size: .8em;
-	margin-top: 2.8em;
 	position: relative;
 	width: 100%; 
 }  
@@ -112,14 +107,12 @@ body {
 	width: 80%; 
 }  
 .experience__button {
-	background: url("right.png") no-repeat;
 	right: 89%; 
 }  
 .hidden { 
 	display: none; 
 }  
 .skills__button {
-	background: url("left.png") no-repeat;
 	left: 89%; 
 }
  
